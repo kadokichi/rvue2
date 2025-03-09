@@ -10,9 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2025_03_09_081741) do
+ActiveRecord::Schema[7.1].define(version: 2025_03_09_082400) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "calendars", force: :cascade do |t|
+    t.date "day"
+    t.datetime "begin_time"
+    t.datetime "close_time"
+    t.datetime "interval_s"
+    t.datetime "interval_e"
+    t.integer "unit_minute"
+    t.boolean "no_use"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "rooms", force: :cascade do |t|
     t.string "name"

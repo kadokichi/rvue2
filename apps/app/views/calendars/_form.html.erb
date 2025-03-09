@@ -1,0 +1,52 @@
+<%= form_with(model: calendar, class: "contents") do |form| %>
+  <% if calendar.errors.any? %>
+    <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-md mt-3">
+      <h2><%= pluralize(calendar.errors.count, "error") %> prohibited this calendar from being saved:</h2>
+
+      <ul class="list-disc ml-6">
+        <% calendar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="my-5">
+    <%= form.label :day %>
+    <%= form.date_field :day, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:day].none?, "border-red-400 focus:outline-red-600": calendar.errors[:day].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :begin_time %>
+    <%= form.datetime_field :begin_time, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:begin_time].none?, "border-red-400 focus:outline-red-600": calendar.errors[:begin_time].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :close_time %>
+    <%= form.datetime_field :close_time, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:close_time].none?, "border-red-400 focus:outline-red-600": calendar.errors[:close_time].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :interval_s %>
+    <%= form.datetime_field :interval_s, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:interval_s].none?, "border-red-400 focus:outline-red-600": calendar.errors[:interval_s].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :interval_e %>
+    <%= form.datetime_field :interval_e, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:interval_e].none?, "border-red-400 focus:outline-red-600": calendar.errors[:interval_e].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :unit_minute %>
+    <%= form.number_field :unit_minute, class: ["block shadow rounded-md border outline-none px-3 py-2 mt-2 w-full", {"border-gray-400 focus:outline-blue-600": calendar.errors[:unit_minute].none?, "border-red-400 focus:outline-red-600": calendar.errors[:unit_minute].any?}] %>
+  </div>
+
+  <div class="my-5">
+    <%= form.label :no_use %>
+    <%= form.check_box :no_use, class: ["block shadow rounded-md border outline-none mt-2 h-5 w-5", {"border-gray-400 focus:outline-blue-600": calendar.errors[:no_use].none?, "border-red-400 focus:outline-red-600": calendar.errors[:no_use].any?}] %>
+  </div>
+
+  <div class="inline">
+    <%= form.submit class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white inline-block font-medium cursor-pointer" %>
+  </div>
+<% end %>
