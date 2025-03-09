@@ -6,8 +6,8 @@
   <% end %>
 
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Rooms</h1>
-    <%= link_to "New room", new_room_path, class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl">ルーム一覧</h1>
+    <%= link_to "New room", new_room_path, class: "new_btn" %>
   </div>
 
   <div id="rooms" class="min-w-full">
@@ -15,7 +15,8 @@
       <% @rooms.each do |room| %>
         <%= render room %>
         <p>
-          <%= link_to "Show this room", room, class: "ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium" %>
+          <%= link_to "表示", room, class: "link_btn" %>
+          <%= link_to "編集", edit_room_path(room), class: "link_btn_mt2" %>
         </p>
       <% end %>
     <% else %>
