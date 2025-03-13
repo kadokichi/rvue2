@@ -1,17 +1,13 @@
 <% content_for :title, "Showing room" %>
 
 <div class="md:w-2/3 w-full">
-  <% if notice.present? %>
-    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
-  <% end %>
-
   <h1 class="font-bold text-4xl">ルーム詳細</h1>
 
   <%= render @room %>
 
-  <%= link_to "編集", edit_room_path(@room), class: "link_btn_mt2" %>
+  <%= link_to "編集", edit_room_path(@room), class: "link_btn_mt2" if admin_signed_in? %>
   <%= link_to "戻る", rooms_path, class: "link_btn_ml2" %>
   <div class="inline-block ml-2">
-    <%= button_to "削除", @room, method: :delete, class: "delete_btn" %>
+    <%= button_to "削除", @room, method: :delete, class: "delete_btn" if admin_signed_in? %>
   </div>
 </div>

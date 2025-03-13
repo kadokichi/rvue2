@@ -20,6 +20,7 @@ ja:
         name: ルーム名
         profile: 詳細案内
       user:
+        name: "ID名"
         current_password: "現在のパスワード"
         email: "メールアドレス"
         password: "パスワード"
