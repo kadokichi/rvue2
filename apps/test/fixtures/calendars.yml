@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  day: 2025-03-09
+  begin_time: 2025-03-09 17:24:00
+  close_time: 2025-03-09 17:24:00
+  interval_s: 2025-03-09 17:24:00
+  interval_e: 2025-03-09 17:24:00
+  unit_minute: 1
+  no_use: false
+
+two:
+  day: 2025-03-09
+  begin_time: 2025-03-09 17:24:00
+  close_time: 2025-03-09 17:24:00
+  interval_s: 2025-03-09 17:24:00
+  interval_e: 2025-03-09 17:24:00
+  unit_minute: 1
+  no_use: false

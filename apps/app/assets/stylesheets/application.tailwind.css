@@ -2,6 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+.new_btn {
+  @apply rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white block font-medium
+}
+
+.link_btn {
+  @apply ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium
+}
+
+.link_btn_mt2 {
+  @apply mt-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium
+}
+
+.link_btn_ml2 {
+  @apply ml-2 rounded-md px-3.5 py-2.5 bg-gray-100 hover:bg-gray-50 inline-block font-medium
+}
+
+.delete_btn {
+  @apply mt-2 rounded-md px-3.5 py-2.5 text-white bg-red-600 hover:bg-red-500 font-medium
+}
+
+.frm_btn {
+  @apply rounded-lg px-5 py-3 text-white inline-block font-medium cursor-pointer
+}
+
+.frm_ln {
+  @apply block shadow rounded-md border border-gray-200 outline-none px-3 py-2 mt-2 w-full
+}
 /*
 
 @layer components {
